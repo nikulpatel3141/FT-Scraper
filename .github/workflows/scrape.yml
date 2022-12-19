@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0/5 * * * *" # Every hour. Ref https://crontab.guru/examples.html
+    - cron: "*/5 * * * *"
 name: Scrape FT Data
 jobs:
   build:
@@ -14,4 +14,4 @@ jobs:
         run: python3 main.py >> output.json
       - uses: mikeal/publish-to-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

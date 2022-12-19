@@ -1,0 +1,17 @@
+on:
+  schedule:
+    - cron: "0/5 * * * *" # Every hour. Ref https://crontab.guru/examples.html
+name: Scrape FT Data
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build
+        run: python3 -m pip install requests
+      - name: Scrape
+        run: python3 main.py >> output.json
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub sets this for you

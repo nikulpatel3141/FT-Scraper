@@ -12,7 +12,7 @@ jobs:
       - name: Build
         run: python3 -m pip install requests
       - name: Scrape
-        run: python3 main.py >> output.json
+        run: python3 main.py > output.json
       - uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

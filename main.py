@@ -10,7 +10,6 @@ FT_SYMBOLS = {
     "FTSE100": "FTSE:FSI",
     "DJIA": "DJI:DJI",
     "GBPUSD": "GBPUSD",
-    "Coffee": "KC.1:IUS",
     "Gold": "GC.1:CMX",
 }  # FIXME: should be in a config file but more convenient here
 FT_ENDPOINT = (

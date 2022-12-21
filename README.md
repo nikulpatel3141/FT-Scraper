@@ -2,6 +2,8 @@
 
 The `main.py` script queries an endpoint provided by [FT](https://www.ft.com/) for the daily returns of the instruments (hardcoded) in that script.
 
+The `main.go` script does the same thing (but is written in Golang instead of Python).
+
 ## Automated Scraping
 
 The `scrape.yml` workflow file runs the script every 5 minutes and pushes the changes to the `master` branch.
